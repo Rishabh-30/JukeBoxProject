@@ -51,7 +51,7 @@ public class JukeBoxTest {
     public void creatingAPlaylist()throws SQLException, ClassNotFoundException {
         PlaylistDao pd = new PlaylistDao();
         assertFalse(pd.getAllPlaylist().isEmpty());
-        assertEquals(3, pd.getAllPlaylist().size());
+        assertEquals(7, pd.getAllPlaylist().size());
     }
 
 }

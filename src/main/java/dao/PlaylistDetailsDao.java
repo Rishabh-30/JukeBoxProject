@@ -25,11 +25,11 @@ public class PlaylistDetailsDao {
             System.out.println("press y for YES and n for NO ");
             String add = scanner.next();
             if (add.equalsIgnoreCase("y")){
-                System.out.println("enter the song name which you wnat to add");
+                System.out.println("enter the song name which you want to add");
                 String songName = scanner.next();
                 PreparedStatement preparedStatement = connection.prepareStatement("insert into playlist_details values(?,?)");
                 preparedStatement.setInt(1, playlistDetails.getPlaylist_Id());
-                preparedStatement.setString(2, playlistDetails.getSong_name());
+                preparedStatement.setString(2, playlistDetails.setSong_name(songName));
                 int row = preparedStatement.executeUpdate();
                 System.out.println("another song is added successfully in the playlist ");
             }

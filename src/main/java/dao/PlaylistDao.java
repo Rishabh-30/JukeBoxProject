@@ -33,23 +33,6 @@ public class PlaylistDao {
         return playLists;
     }
 
-    public boolean deletePlaylistByID(int id) throws SQLException, ClassNotFoundException {
-        Connection connection = new DbConnection().getConnection();
-        try{
-            PreparedStatement preparedStatement=connection.prepareStatement("delete from playlist where p_id=?");
-            preparedStatement.setInt(1,id);
-            int rows=preparedStatement.executeUpdate();
-            if(rows>0){
-                System.out.println("\nPlaylist removed");
-                return true;
-            }
-        }
-        catch(SQLException e){
-            System.out.println(e);
-        }
-        return false;
-
-    }
 
     public void deletePlaylistByName(String name) throws SQLException, ClassNotFoundException {
         Connection connection=new DbConnection().getConnection();

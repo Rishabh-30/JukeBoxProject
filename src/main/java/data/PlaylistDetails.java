@@ -22,8 +22,9 @@ public class PlaylistDetails {
         return song_name;
     }
 
-    public void setSong_name(String song_name) {
+    public String setSong_name(String song_name) {
         this.song_name = song_name;
+        return song_name;
     }
 
     @Override
